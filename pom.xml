@@ -9,8 +9,8 @@
 
     <properties>
         <metamodel.ecore>${basedir}/target/metamodel/kevoree.ecore</metamodel.ecore>
-        <kmf.version>1.9.11</kmf.version>
-        <kevoree.version>3.4.0</kevoree.version>
+        <kmf.version>1.9.12-SNAPSHOT</kmf.version>
+        <kevoree.version>3.4.2-SNAPSHOT</kevoree.version>
     </properties>
 
     <dependencies>
@@ -75,4 +75,23 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>kevoree.oss.release</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>kevoree.oss.snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>oss.sontype.org</id>
+            <name>sonatype</name>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+    </repositories>
 </project>
